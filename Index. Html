@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday My Love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- Music -->
+    <audio id="birthdayMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Opening Screen -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="small-text">
+                A little surprise for you...
+            </div>
+
+            <h1>
+                Happy Birthday
+                <span>My Love ❤️</span>
+            </h1>
+
+            <p class="intro">
+                Today is not just your birthday...
+                <br>
+                It's the day the world became a little more beautiful.
+            </p>
+
+            <button class="main-button" onclick="startSurprise()">
+                Open Your Surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Website -->
+    <main id="mainContent" class="hidden">
+
+        <!-- Birthday Message -->
+        <section class="section birthday-message">
+
+            <p class="section-label">TODAY IS YOUR SPECIAL DAY</p>
+
+            <h2>
+                Happy Birthday,
+                <span>My Everything ❤️</span>
+            </h2>
+
+            <p>
+                I don't know if words will ever be enough to explain
+                how special you are to me.
+                But today, I want you to know one thing...
+            </p>
+
+            <p class="highlight">
+                I am incredibly lucky to have you in my life. ❤️
+            </p>
+
+        </section>
+
+
+        <!-- Countdown -->
+        <section class="section countdown-section">
+
+            <p class="section-label">COUNTING DOWN TO YOUR SPECIAL DAY</p>
+
+            <h2>The Countdown 🎂</h2>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Love Letter -->
+        <section class="section letter-section">
+
+            <p class="section-label">A LETTER FROM MY HEART</p>
+
+            <h2>For You, My Love 💌</h2>
+
+            <div class="letter">
+
+                <p>My Love,</p>
+
+                <p>
+                    On your birthday, I just want to remind you how
+                    important you are to me.
+                </p>
+
+                <p>
+                    You are the person who makes ordinary moments feel
+                    special. Your presence makes my life happier,
+                    warmer and more beautiful.
+                </p>
+
+                <p>
+                    I hope this new year of your life brings you
+                    everything your heart wishes for.
+                </p>
+
+                <p>
+                    No matter where life takes us, I hope we continue
+                    making beautiful memories together.
+                </p>
+
+                <p class="love-line">
+                    I love you more than words can say. ❤️
+                </p>
+
+                <p class="signature">
+                    Forever yours,<br>
+                    ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Memories -->
+        <section class="section memories-section">
+
+            <p class="section-label">OUR LITTLE WORLD</p>
+
+            <h2>Beautiful Memories 📸</h2>
+
+            <p class="section-description">
+                Every picture has a story.
+                Every memory has a piece of my heart.
+            </p>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="photo1.jpg" alt="Our Memory">
+                    <p>Our Beautiful Moment ❤️</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo2.jpg" alt="Our Memory">
+                    <p>A Memory I Treasure 💕</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo3.jpg" alt="Our Memory">
+                    <p>Us, Together 🥰</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo4.jpg" alt="Our Memory">
+                    <p>One Of My Favorites ❤️</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Our Story -->
+        <section class="section story-section">
+
+            <p class="section-label">OUR JOURNEY</p>
+
+            <h2>Our Story ❤️</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">❤️</div>
+
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>
+                            This is where our beautiful story began...
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">💕</div>
+
+                    <div class="timeline-content">
+                        <h3>Beautiful Memories</h3>
+                        <p>
+                            Slowly, ordinary days started becoming
+                            some of my favorite memories.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">🥰</div>
+
+                    <div class="timeline-content">
+                        <h3>Today</h3>
+                        <p>
+                            And here we are, celebrating another
+                            beautiful year of your life.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reasons -->
+        <section class="section reasons-section">
+
+            <p class="section-label">JUST A FEW REASONS</p>
+
+            <h2>Why You Are Special ❤️</h2>
+
+            <div class="reasons">
+
+                <div class="reason">
+                    <span>❤️</span>
+                    <h3>Your Heart</h3>
+                    <p>
+                        You have a heart that makes you incredibly special.
+                    </p>
+                </div>
+
+                <div class="reason">
+                    <span>😊</span>
+                    <h3>Your Smile</h3>
+                    <p>
+                        Your smile can make even an ordinary day beautiful.
+                    </p>
+                </div>
+
+                <div class="reason">
+                    <span>🤍</span>
+                    <h3>Your Presence</h3>
+                    <p>
+                        Simply having you around makes everything better.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Surprise -->
+        <section class="section surprise-section">
+
+            <div class="surprise-box">
+
+                <p class="section-label">ONE LAST THING...</p>
+
+                <h2>
+                    I Have A Surprise For You 🎁
+                </h2>
+
+                <p>
+                    Are you ready?
+                </p>
+
+                <button class="main-button" onclick="showSurprise()">
+                    Open It ❤️
+                </button>
+
+                <div id="surpriseMessage" class="surprise-message">
+
+                    <h3>❤️ I LOVE YOU ❤️</h3>
+
+                    <p>
+                        Today, tomorrow and every day after that.
+                    </p>
+
+                    <p>
+                        Happy Birthday to the most special person
+                        in my world. 🎂💕
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final -->
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <div class="big-heart">❤️</div>
+
+                <h2>
+                    Happy Birthday,
+                    <br>
+                    My Love
+                </h2>
+
+                <p>
+                    May your life always be filled with happiness,
+                    love, success and beautiful moments.
+                </p>
+
+                <p class="forever">
+                    Forever & Always ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Music Button -->
+    <button class="music-button" onclick="toggleMusic()" id="musicButton">
+        🎵
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* =========================
+   START SURPRISE
+========================= */
+
+function startSurprise() {
+
+    const hero = document.getElementById("home");
+    const main = document.getElementById("mainContent");
+
+    hero.style.display = "none";
+
+    main.classList.remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    startHearts();
+
+    playMusic();
+}
+
+
+/* =========================
+   SURPRISE MESSAGE
+========================= */
+
+function showSurprise() {
+
+    const message = document.getElementById("surpriseMessage");
+
+    message.style.display = "block";
+
+    createHeartExplosion();
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const music = document.getElementById("birthdayMusic");
+
+let musicPlaying = false;
+
+
+function playMusic() {
+
+    if (!music) return;
+
+    music.play()
+        .then(() => {
+
+            musicPlaying = true;
+
+            document.getElementById("musicButton").innerHTML = "🔊";
+
+        })
+        .catch(() => {
+
+            musicPlaying = false;
+
+        });
+
+}
+
+
+function toggleMusic() {
+
+    if (!music) return;
+
+    if (musicPlaying) {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        document.getElementById("musicButton").innerHTML = "🎵";
+
+    } else {
+
+        music.play();
+
+        musicPlaying = true;
+
+        document.getElementById("musicButton").innerHTML = "🔊";
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💓",
+        "💞"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (Math.random() * 20 + 12) + "px";
+
+    heart.style.animationDuration =
+        (Math.random() * 5 + 5) + "s";
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 10000);
+
+}
+
+
+function startHearts() {
+
+    setInterval(createHeart, 700);
+
+}
+
+
+/* =========================
+   HEART EXPLOSION
+========================= */
+
+function createHeartExplosion() {
+
+    for (let i = 0; i < 35; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = "❤️";
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (Math.random() * 25 + 15) + "px";
+
+        heart.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 6000);
+
+    }
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+/*
+   CHANGE THIS DATE
+   TO YOUR HUSBAND'S BIRTHDAY
+
+   Example:
+   August 25, 2026 at 12:00 AM
+
+*/
+
+const birthdayDate =
+    new Date("August 25, 2026 00:00:00").getTime();
+
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+
+    const distance = birthdayDate - now;
+
+
+    if (distance <= 0) {
+
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+
+    const hours =
+        Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+
+    document.getElementById("days").innerHTML =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").innerHTML =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").innerHTML =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").innerHTML =
+        String(seconds).padStart(2, "0");
+
+}
+
+
+setInterval(updateCountdown, 1000);
+
+updateCountdown();
